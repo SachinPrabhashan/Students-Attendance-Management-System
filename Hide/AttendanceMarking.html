@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="css\bootstrap.min.css">
+    
+    <!-- Bootstrap JS -->
+    <script type="text/javascript" src="js\bootstrap.bundle.min.js">
+    </script>
+    <title>Student Attendance Management System</title>
+</head>
+
+<body>
+<!-- Navigaton bar-->
+    <div class="container">
+        <h1>Student Attendance Management System - ABC Institute</h1>
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="AttendanceMarking.html">Attendance Marking</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="StudentRegistration.html">Students Registration</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="AttendanceReport.html">Attendance Report</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled"></a>
+        </li>
+      </ul>
+    </div>
+    <!--Student Reg No Entering part-->
+    <form class="container" method="post" action="search.php">
+        <br>
+        <div class="col-md-3">
+          <label for="sturegno" class="form-label">Student Registration No:</label>
+          <input type="text" class="form-control" name="sturegno" placeholder="Registration No">
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Search</button>
+      </form>
+      <br>
+      <!--Student Detail Table-->
+      <div class="container">
+        <table class="table">
+            <tr>
+                <th>REG. NO.</th>
+                <th>NAME</th>
+                <th>NIC</th>
+                <th>CONTACT NO</th>
+                <th>GUARDIAN CONTACT NO</th>
+                <th>ADDRESS</th>
+            </tr>
+            <tr>
+                <td>ABC0001</td>
+                <td>Sachin</td>
+                <td>980640230V</td>
+                <td>+94760300001</td>
+                <td>+94771817332</td>
+                <td>"Aluth Gedara", Beramada, Haliela.</td>
+            </tr>
+            
+        </table>
+        
+      </div>
+      <!--Check in / Check Out Option-->
+      
+      <br>
+      <div>
+        <form class="container col-lg-6 offset-lg-8">
+            
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                    Check In
+                    </label>
+                    <div class="col-sm-6">
+                      <input type="datetime-local" class="form-control" placeholder="Pick a Date">
+                    </div>
+                </div>
+                <div class="form-check text-right">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                    <label class="form-check-label" for="flexRadioDefault2">
+                    Check Out
+                    </label>
+                    <div class="col-sm-6">
+                      <input type="datetime-local" class="form-control" placeholder="Pick a Date">
+                    </div>
+                </div>
+            
+              <br>
+                <button type="reset" class="btn btn-danger">CLEAR</button>
+                <button type="submit" class="btn btn-primary btn-success">UPDATE</button>
+        </form>
+      </div>
+
+</body>
+</html>

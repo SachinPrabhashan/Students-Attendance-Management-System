@@ -1,0 +1,164 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 5px;
+  background: linear-gradient(45deg, #F9E0BB, #C38154);
+  font-family: Product Sans;
+  font-size: medium;
+}
+
+body {
+  background-image: url('assets/back00001.jpg');
+  background-size: cover;
+  opacity: 1;
+  border-radius: 10px;
+}
+
+
+.container {
+  margin-bottom: 30px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #F9E0BB;
+}
+
+.nav-link {
+  color: #F9E0BB;
+  border-radius: 7px;
+  border: none;
+}
+
+
+.nav-link:hover {
+  color: #fff;
+  background: linear-gradient(45deg, #C38154, #F9E0BB);
+  border: none;
+}
+
+.nav-item {
+  margin-right: 10px;
+  margin-left: 10px;
+  border-bottom: 1px solid #F9E0BB;
+  border-radius: 5px;
+}
+
+.nav-item:hover {
+  border-color: transparent;
+
+}
+
+.nav {
+  border-color: transparent;
+}
+
+.nav-link.active {
+  background: linear-gradient(45deg, #C38154, #F9E0BB);
+  border: none;
+  font-weight: bold;
+  color: white;
+}
+
+.form-label,
+.me-3,
+.regform,
+.filt {
+  color: #F9E0BB;
+  font-weight: bold;
+}
+
+.btn-danger {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.table {
+  color: #F9E0BB;
+  background-color: #C38154;
+  border-radius: 10px;
+
+}
+
+.tablewhole {
+  max-height: 400px;
+  /* Adjust the height as needed */
+  overflow-y: scroll;
+}
+
+
+.welcometxt {
+  font-size: 70pt;
+  color: #F9E0BB;
+}
+
+.welcometxt:hover {
+  cursor: default;
+}
+
+button.btn-outline-info {
+  float: right;
+  background-image: url('assets/person.svg');
+  background-size: cover;
+  padding: 5px;
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  background-color: #C38154;
+  border: transparent;
+
+}
+
+
+/*Login form css*/
+.loginform {
+  width: 30%;
+  border: #F9E0BB solid;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.txt001 {
+  color: #917d60;
+}
+
+
+/*Copyright Text*/
+.copyright {
+  font-size: medium;
+  font-family: Product Sans;
+  color: #C38154;
+  float: right;
+  opacity: 0.1;
+}
+
+
+button.btnlogout {
+  float: right;
+  background-image: url('assets/log-out.svg');
+  background-size: cover;
+  padding: 5px;
+  border-radius: 10px;
+  width: 40px;
+  margin-left: 5px;
+  height: 40px;
+  background-color: #C38154;
+  border: transparent;
+}
+
+button.bntadmin {
+  float: right;
+  /*background-image: url('assets/user-square.svg'); */
+  background-size: medium;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 20px;
+  padding: 0xp;
+  border-radius: 10px;
+  width: 100px;
+  height: 40px;
+  background-color: #C38154;
+  border: transparent;
+  align-items: center;
+}

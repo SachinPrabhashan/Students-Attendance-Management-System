@@ -1,0 +1,137 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 5px;
+  background: linear-gradient(45deg, #F9E0BB, #C38154);
+  font-family: Product Sans;
+  font-size: medium;
+}
+
+body {
+  background-image: url('assets/backimage2bl.jpg');
+  background-size: cover;
+  opacity: 1;
+  border-radius: 10px;
+}
+
+.container {
+  margin-bottom: 30px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #F9E0BB;
+}
+
+.nav-link {
+  color: #F9E0BB;
+  border-radius: 7px;
+  border: none;
+}
+
+
+.nav-link:hover {
+  color: #fff;
+  background: linear-gradient(45deg, #C38154, #F9E0BB);
+  border: none;
+}
+
+.nav-item {
+  margin-right: 10px;
+  margin-left: 10px;
+  border-bottom: 1px solid #F9E0BB;
+  border-radius: 5px;
+}
+
+.nav-item:hover {
+  border-color: transparent;
+
+}
+
+.nav {
+  border-color: transparent;
+}
+
+.nav-link.active {
+  background: linear-gradient(45deg, #C38154, #F9E0BB);
+  border: none;
+  font-weight: bold;
+  color: white;
+}
+
+.form-label,
+.me-3,
+.regform,
+.filt {
+  color: #F9E0BB;
+  font-weight: bold;
+}
+
+.btn-danger {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.table {
+  color: rgb(66, 66, 66);
+  background-color: #fff2e9;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+thead {
+  color: #fff2e9;
+  background-color: rgb(66, 66, 66);
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.tablewhole {
+  max-height: 400px;
+  /* Adjust the height as needed */
+  overflow-y: scroll;
+}
+
+button.btn-outline-info {
+  float: right;
+  background-image: url('assets/person.svg');
+  background-size: cover;
+  padding: 5px;
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  background-color: #C38154;
+  border: transparent;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+button.btnlogout {
+  float: right;
+  background-image: url('assets/log-out.svg');
+  background-size: cover;
+  padding: 5px;
+  border-radius: 10px;
+  width: 40px;
+  margin-left: 5px;
+  height: 40px;
+  background-color: #C38154;
+  border: transparent;
+}
+
+button.bnthome {
+  float: right;
+  background-image: url('assets/home.svg');
+  background-size: cover;
+  padding: 5px;
+  border-radius: 10px;
+  width: 40px;
+  margin-left: 5px;
+  height: 40px;
+  background-color: #C38154;
+  border: transparent;
+}
+
+
+input[type="radio"]:checked+label {
+  color: #ff0000;
+}

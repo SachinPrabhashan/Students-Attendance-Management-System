@@ -1,0 +1,154 @@
+<!-- STUDENT REGISTRATION TAB -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS -->
+
+  <link rel="stylesheet" type="text/css" href="css\bootstrap.min.css">
+
+  <!-- Bootstrap JS-->
+  <script type="text/javascript" src="js\bootstrap.bundle.min.js">
+  </script>
+  <link rel="stylesheet" type="text/css" href="custom.css">
+  <!--Add Icon into Title Bar-->
+  <link rel="icon" type="image/png" href="assets/microchip.svg">
+  <title>Student Attendance Management System</title>
+
+  <!--Script for logout into same page-->
+  <script>function navigateToPage(url) {
+      window.location.href = url;
+    }
+
+
+  </script>
+
+
+</head>
+
+<body>
+  <!-- Navigaton bar-->
+
+  <div class="userbtn">
+    <button type="button" class="bnthome" onclick="navigateToPage('index.html')" title="Home"></button>
+    <button type="button" class="btnlogout" onclick="navigateToPage('index.php')" title="Logout"></button>
+    <button type="button" class=" btn-outline-info" title="Profile"></button>
+  </div>
+  <div class="container">
+    <h1>Student Attendance Management System - ABC Institute</h1>
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link" aria-current="page" href="AttendanceMarking.php">Attendance Marking</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="StudentRegistration.html">Students Registration</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="AttendanceReport.php">Attendance Report</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="StudentView.php">Students View</a>
+      </li>
+    </ul>
+  </div>
+  <!--Student Registraion Form-->
+  <div class="container regform">
+    <br>
+    <h4>Register a New Student</h4>
+    <form name="regform" method="post" action="insert.php" onsubmit="return validateForm();">
+      <div class="mb-3 row">
+        <label for="inputName" class="col-sm-2 col-form-label">NAME:</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" name="inputName" required>
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label for="inputNIC" class="col-sm-2 col-form-label">NIC:</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" name="inputNIC" required>
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label for="inputContactNo" class="col-sm-2 col-form-label">CONTACT NO:</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" name="inputContactNo" required>
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label for="inputGuadianNo" class="col-sm-2 col-form-label">GUARDIAN CONTACT NO:</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" name="inputGuadianNo" required>
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label for="inputAddress" class="col-sm-2 col-form-label">ADDRESS:</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" name="inputAddress" required>
+        </div>
+      </div>
+      <div class="offset-lg-6">
+        <button type="reset" class="btn btn-danger">CLEAR</button>
+        <button type="button" class="btn btn-primary btn-success" data-bs-toggle="modal"
+          data-bs-target="#exampleModal">REGISTER</button>
+
+        <!-- Modal (PopUp)-->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">ARE YOU SURE?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                Now save student's information.
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">CLOSE</button>
+                <button type="submit" class="btn btn-success">SAVE</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+
+  <script>
+    function validateForm() {
+      var inputName = document.forms["regform"]["inputName"].value;
+      var inputNIC = document.forms["regform"]["inputNIC"].value;
+      var inputContactNo = document.forms["regform"]["inputContactNo"].value;
+      var inputGuadianNo = document.forms["regform"]["inputGuadianNo"].value;
+      var inputAddress = document.forms["regform"]["inputAddress"].value;
+
+      if (inputName === "" || inputNIC === "" || inputContactNo === "" || inputGuadianNo === "" || inputAddress === "") {
+        alert("All fields must be filled out");
+        return false;
+      }
+      if (inputNIC.length <= 9) {
+        alert("NIC must be more than 9 characters");
+        return false;
+      }
+
+      if (isNaN(inputContactNo) || inputContactNo.length !== 10) {
+        alert("Enter Valid Contact Number");
+        return false;
+      }
+
+      if (isNaN(inputGuadianNo) || inputGuadianNo.length !== 10) {
+        alert("Enter Valid Guardian Contact Number");
+        return false;
+      }
+      return true;
+    }
+  </script>
+
+</body>
+
+</html>

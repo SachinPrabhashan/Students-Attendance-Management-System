@@ -1,0 +1,19 @@
+.popup {
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.1);
+  position: absolute;
+  width: 400px;
+  text-align: center;
+  background: #fff;
+  padding: 30px 30px 30px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  visibility: hidden;
+  transition: transform 0.4s, top 0.4s;
+}
+
+.open-popup {
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+
+}
